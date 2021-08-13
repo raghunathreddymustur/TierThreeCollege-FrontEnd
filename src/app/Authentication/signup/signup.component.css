@@ -73,6 +73,7 @@
     background-color: aqua;
     color: black;
     border: none;
+    cursor: pointer;
 }
 .sp-flex .sp-form .main-form .text-input label
 {

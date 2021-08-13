@@ -6,30 +6,30 @@
         <div class="sp-form">
         <div class="main-form">
             <h2>SignUp</h2>
-            <form action="">
+            <form [formGroup]="signUpForm" action="">
                 <div class="text-input">
-                    <input type="text" required>
+                    <input type="text" required formControlName="fullName">
                     <label >Full Name</label>
                 </div>
                 <div class="text-input" >
-                    <input type="text"  required>
+                    <input type="text"  required formControlName="email">
                     <label >Email</label>
                 </div>
                 
-                <div class="text-input">
-                    <input type="password"  required>
+                <div class="text-input" >
+                    <input type="password"  required formControlName="password">
                     <label >Strong Password</label>
                 </div>
                 <div class="text-input">
-                    <input type="text"  required>
+                    <input type="text"  required formControlName="graduationYear">
                     <label >Graduation Year</label>
                 </div>
                 <div class="text-input"  >
-                    <input type="text" required>
+                    <input type="text" required formControlName="nameOfCollege">
                     <label >Name Of College</label>
                 </div>
                 <div class="submit-input">
-                    <input type="submit" value="Submit">
+                    <input type="submit" value="Submit" (click)="signUpFormData()">
                     <div>
                         Already Have Account? Please <a href="#">Login</a>
                     </div>

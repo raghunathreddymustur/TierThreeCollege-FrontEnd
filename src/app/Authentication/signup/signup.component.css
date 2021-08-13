@@ -1,0 +1,114 @@
+*{
+    outline: none;
+}
+.main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    position: relative;
+}
+.sp-flex
+{
+    border: 1px solid red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 50vw;  
+}
+.sp-flex .sp-img
+{
+    border: 1px solid green;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+    height: 100%;
+}
+.sp-flex .sp-img img{
+    width: 100%;
+    object-fit: contain;
+    border: 1px solid violet;
+}
+.sp-flex .sp-form
+{
+    width: 60%;
+    border: 1px solid black;
+    display: flex;
+}
+.sp-flex .sp-form .main-form
+{
+    width: 100%;
+    margin-left: 2%;
+}
+.sp-flex .sp-form .main-form h2
+{
+    text-align: center;
+}
+.sp-flex .sp-form form .text-input
+{
+    width: 100%;
+    position: relative;
+    margin-top: 15%;
+
+}
+.sp-flex .sp-form .main-form .text-input input[type="text"],.sp-flex .sp-form .main-form .text-input input[type="password"]
+{
+    
+    display: block; 
+    width: 80%;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    background: transparent;
+    border-bottom: 1px solid black;
+    box-shadow: none;
+    
+}
+.sp-flex .sp-form .main-form .submit-input input[type="submit"]
+{
+    width: 80%;
+    padding: 5px;
+    background-color: aqua;
+    color: black;
+    border: none;
+}
+.sp-flex .sp-form .main-form .text-input label
+{
+    top: 0%;
+    position: absolute;
+    pointer-events: none;
+}
+.sp-flex .sp-form .main-form .text-input input:focus+label,.sp-flex .sp-form .main-form .text-input input:focus+label,
+.sp-flex .sp-form .main-form .text-input input:valid+label,.sp-flex .sp-form .main-form .text-input input:valid+label
+{
+    color:blueviolet;
+    top: -130%;
+}
+
+@media(max-width:720px)
+{
+    .sp-flex
+    {
+        border: 1px solid red;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        position: relative;
+        width: 70vw;
+        height: 70vh;
+    }
+    .sp-flex .sp-img
+    {
+        display: none;
+    }
+
+}
+
+
+
+
+
+

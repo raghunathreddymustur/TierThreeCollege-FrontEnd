@@ -1,23 +1,27 @@
 <div class="main">
+    
     <div class="sp-flex">
         <div class="sp-img">
             <img src="assets\Images\SignUp\sectionimg.png" alt="">
         </div>
         <div class="sp-form">
         <div class="main-form">
+            <div *ngIf="!isFormValid"> Enter fill the form with correct details</div>
             <h2>SignUp</h2>
-            <form [formGroup]="signUpForm" action="">
+            <form  [formGroup]="signUpForm" action="">
                 <div class="text-input">
                     <input type="text" required formControlName="fullName">
                     <label >Full Name</label>
+                    <span style="color: brown;" *ngIf="signUpForm.get('fullName').hasError('required')&& signUpForm.get('fullName').touched">*Full Name is required</span>
                 </div>
                 <div class="text-input" >
                     <input type="text"  required formControlName="email">
                     <label >Email</label>
+                    <span  style="color: rgb(134, 134, 134);"   *ngIf="signUpForm.get('email').hasError('required') && signUpForm.get('email').touched">*Email Name is required</span>
                 </div>
-                
+                 
                 <div class="text-input" >
-                    <input type="password"  required formControlName="password">
+                    <input type="password" required formControlName="password">
                     <label >Strong Password</label>
                 </div>
                 <div class="text-input">
@@ -25,11 +29,12 @@
                     <label >Graduation Year</label>
                 </div>
                 <div class="text-input"  >
-                    <input type="text" required formControlName="nameOfCollege">
+                    <input type="text" required  formControlName="nameOfCollege">
                     <label >Name Of College</label>
                 </div>
                 <div class="submit-input">
-                    <input type="submit" value="Submit" (click)="signUpFormData()">
+                    <button type="submit" (click)="signUpFormData()"[disabled]="!signUpForm.valid">Submit </button>
+                    
                     <div>
                         Already Have Account? Please <a href="#">Login</a>
                     </div>

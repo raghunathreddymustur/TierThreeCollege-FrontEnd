@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, MinValidator, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-signup',
@@ -8,22 +8,25 @@ import { FormControl, FormGroup } from '@angular/forms';
 })
 export class SignupComponent implements OnInit {
   signUpForm!:FormGroup 
-
+  isFormValid!:boolean
+  
   constructor() { }
 
   ngOnInit(): void {
+    this.isFormValid=true;
     this.signUpForm=new FormGroup(
       {
-        'fullName':new FormControl("Enter Your Name"),
-        'email':new FormControl(),
-        'password':new FormControl(),
-        'graduationYear':new FormControl(),
-        'nameOfCollege':new FormControl()
+        'fullName':new FormControl("",[Validators.required,Validators.minLength(5)]),
+        'email':new FormControl("",[Validators.required,Validators.email]),
+        'password':new FormControl("",[Validators.required,Validators.minLength(8)]),
+        'graduationYear':new FormControl("",[Validators.required,Validators.minLength(4)]),
+        'nameOfCollege':new FormControl("",[Validators.required,Validators.minLength(5)])
       }
     )
   }
   signUpFormData()
   {
-     console.log(this.signUpForm.value);
+     this.isFormValid=this.signUpForm.valid;
   }
+
 }

@@ -1,4 +1,189 @@
 *{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+    color: white;
+}
+#total-body{
+    background-color:  #333333;
+    width: 100vw;
+    height: 100vh;
+}
+#card
+{
+    
+    width:100vw;
+    height:100vh;
+}
+
+.two-box{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    border: 1px solid gold;
+    padding: 8%;
+    padding-left: 12%;
+}
+.signup-img
+{
+    /* border: 1px solid salmon; */
+    width: 45%;
+   
+}
+.signup-img img
+{
+    width: 100%;
+    height: 100%;
+    object-fit:contain;
+    
+}
+.signup-content
+{
+    /* border: 1px solid rgb(211, 114, 250); */
+    width: 50%;
+}
+.signup-content-wrapper
+{
+    width: 100%;
+    height: 100%;
+    
+}
+
+
+.signup-form
+{
+    /* border: 1px solid greenyellow; */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    
+    /* align-items: center; */
+}
+/* .signup-content-img
+{
+    width: 50px;
+    height: 50px;
+    border-radius: 0.5;
+} */
+
+
+.fa-user
+{
+    color: #6E85B2;
+    font-size: 25px;
+}
+.signup-input
+{
+    margin-bottom: 2%;
+}
+.signup-header 
+{
+    padding-left: 18%;
+    margin-bottom: 6%;
+}
+ .user-input
+{ 
+    border: 1px solid #6E85B2;
+  -webkit-appearance: none;
+  -ms-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: none;
+  padding: 8px;
+  border-radius: 3px;
+  width: 300px;
+  font-size: 14px;
+  color: white;  
+
+}
+.user-input-submit
+{ 
+    border: none;
+  /* -webkit-appearance: none;
+  -ms-appearance: none;
+  -moz-appearance: none;
+  appearance: none; */
+  background: #6E85B2;
+  padding: 8px;
+  border-radius: 3px;
+  width: 300px;
+  font-size: 14px;
+  cursor: pointer;
+}
+.user-input:focus
+{
+    outline: none;
+    border: 1px solid #FF0075 ;
+   
+    
+}
+.input-label
+{
+    color: #f2f2f2;
+}
+.user-input-submit,.signin, .user-input
+{
+    transition: 0.5s;
+}
+.user-input-submit:hover{
+    letter-spacing: 2px;
+    background-color: #FEC260;
+}
+.signin{
+    color: #FEC260;
+    text-decoration: none;
+}
+.signin:hover{
+    color: #FF0075;
+    letter-spacing: 2px;
+}
+
+@media (max-width:680px)
+{
+    .signup-img{
+        display: none;
+    }
+    .user-input,.user-input-submit
+    { 
+        width: 250px;
+    }
+    .signup-form
+    {
+        align-items: center;
+    }
+    .signup-content
+    {
+    
+    width: 100%;
+    }
+    .signup-header{
+        padding: 0%;
+        margin-bottom: 6%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* *{
     outline: none;
 }
 .main{
@@ -116,4 +301,4 @@
 
 
 
-
+ */

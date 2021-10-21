@@ -1,56 +1,58 @@
 <div id="total-body">
-    <div id="card">
+  <div id="card">
 
-        <div class="two-box">
-            <div class="signup-img"><img src="assets\Images\SignUp\signup2.png" alt="signup-img"></div>
-            <div class="signup-content">
-                <!-- <div class="signup-content-img">
+    <div class="two-box">
+      <div class="signup-img"><img src="assets\Images\SignUp\signup2.png" alt="signup-img"></div>
+      <div class="signup-content">
+        <!-- <div class="signup-content-img">
                     <img src="assets\Images\SignUp\logo.png" alt="">
                 </div> -->
-               <div class="signup-content-wrapper">
+        <div class="signup-content-wrapper">
 
-                <div class="signup-form">
-                    <div class="signup-header signup-input">
-                        <i class="fas fa-user"> Sign Up</i>
-                    </div>
-                    <div class="signup-input">
-                        <div><label class="input-label" for="">Email</label></div>
-                        <input class="user-input" type="email">
-                    </div>
-                    
-                    <div class="signup-input">
-                        <div><label class="input-label" for="">Full Name</label></div>
-                        <input class="user-input" type="text">
-                    </div>
-                    
-                    <div class="signup-input">
-                        <div><label class="input-label" for="">Password</label></div>
-                        <input class="user-input" type="password">
-                    </div>
-                    
-                    <div class="signup-input">
-                        <div><label class="input-label" for="">Year of Passout</label></div>
-                        <input class="user-input" type="text">
-                    </div>
-                    
-                    <div class="signup-input">
-                        <div><label class="input-label" for="">Name of the college</label></div>
-                        <input class="user-input" type="text">
-                        
-                    </div>
-                  
-                    <div class="signup-input">
-                        <button class="user-input-submit" type="submit"  > Submit</button>
-                    </div>
-                    <div>
-                        <p >Already a Member? <a class="signin"href="">SignIn</a></p>
-                    </div>
-                </div>
+          <div class="signup-form">
+            <div class="signup-header signup-input">
+              <i class="fas fa-user"> Sign Up</i>
             </div>
-            </div>
+            <form [formGroup]="signUpForm" action="">
+              <div class="signup-input">
+                <div><label class="input-label" for="">Email</label></div>
+                <input class="user-input" type="email" formControlName="email">
+              </div>
+
+              <div class="signup-input">
+                <div><label class="input-label" for="">Full Name</label></div>
+                <input class="user-input" type="text" formControlName="fullName">
+              </div>
+
+              <div class="signup-input">
+                <div><label class="input-label" for="">Password</label></div>
+                <input class="user-input" type="password" formControlName="password">
+              </div>
+
+              <div class="signup-input">
+                <div><label class="input-label" for="">Year of Passout</label></div>
+                <input class="user-input" type="text" formControlName="yearOfPassOut">
+              </div>
+
+              <div class="signup-input">
+                <div><label class="input-label" for="">Name of the college</label></div>
+                <input class="user-input" type="text" formControlName="collegeName">
+
+              </div>
+
+              <div class="signup-input">
+                <button class="user-input-submit" type="submit" (click)="signUpFormData(signUpForm)"> Submit</button>
+              </div>
+              <div>
+                <p>Already a Member? <a class="signin" href="">SignIn</a></p>
+              </div>
+            </form>
+          </div>
         </div>
-        
+      </div>
     </div>
+
+  </div>
 </div>
 
 

@@ -7,7 +7,7 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './Authentication/login/login.component';
 import { SignupComponent } from './Authentication/signup/signup.component';
 import { HeaderComponent } from './header/header.component';
-
+import {HttpClientModule} from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +18,8 @@ import { HeaderComponent } from './header/header.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
